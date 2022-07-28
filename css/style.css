@@ -1,37 +1,40 @@
 html, * {
-    box-sizing: border-box;
+	font-family: helvetica;
+	box-sizing: border-box;
+	background-color: whitesmoke;
   }
 
-  header {
+header {
     font-size: 10vmin;
     color: green;
     background-color: black;
     text-align: center;
   }
-
   body {
     margin: 0;
     height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr;
   }
-
   main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+  #health{
+    padding: 10px 0 4px 0;
+	  width: 300px;
+    background-color: #239A47;
+	  border: 1px solid black;
 
-  #happyMeter{
-    padding: 3px 0 4px 0;
-	width: 130px;
+    
   }
-
 
   #dungeon {
     width: 34vmin;
     height: 30vmin;
-    background-image: url(/Users/KOC/code/p1/imgs/monster.png);
+	/* background-image: url(/Users/KOC/code/doover/css/imgs/cage.jpeg); */
+    /* background-image: url(/Users/KOC/code/p1/imgs/monster.png); */
     background-size: cover;
   }
