@@ -1,26 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>lets go</title>
     <link rel="stylesheet" href="css/main.css" />
     <script defer src="js/app.js"></script>
 </head>
 <body>
-    <header>BRONSTARS</header>
-    <!-- <button id="start">START</button> -->
-    <main>
-        <h1>Player</h1>
-        <h2 id="score"></h2>
-        <h1 id="health"></h1>
-        <div id="dungeon"></div>
-        <h2>Monster</h2>
-        <section id="commands">
-            <button id="punchBtn">PUNCH</button>
-            <button id="kickBtn">KICK</button>
-        </section>
-        <button id="replay">PLAY AGAIN</button>
+   
+    <div class="main-menu-screen">
+        <header>DRAGON SITTER</header>
+		<div class="menu">
+            <img src="imgs/mom.gif" width = "150" height = "150">
+			<h1>Valamaradace</h1>
+			<h3>"I'M TRUSTING MY CHILD TO YOU FOR 25 DAYS. DO NOT FAIL ME!"</h3>
+			<div class="menu-buttons">
+				<a href="#" id="action-menu-start-game">Start</a>
+
+			</div>
+		</div>
+	</div>
+    <div class="game-screen">
+		<div class="monster">
+			<div class="hp">
+				<p>Happiness: <span id="happiness-hp"></span>%</p>
+				<p>Hunger: <span id="hunger-hp"></span>%</p>
+				<p>Discipline: <span id="discipline-hp"></span>%</p><br>
+				<p id="days-bar">Days: <span id="days"></span></p>
+			</div>
+
+            <img src="imgs/olderbaby.gif" width = "100" height = "100">
+            <p><span id="name">Goldie</span></p>
+
+		  	<div class="buttons">
+				<a href="#" id="action-pet">Pet</a>
+				<a href="#" id="action-feed">Feed</a>
+				<a href="#" id="action-train">Train</a>
+                <a href="#" id="action-replay">Replay</a>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>

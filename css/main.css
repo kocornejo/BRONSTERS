@@ -1,40 +1,181 @@
-html, * {
-	font-family: helvetica;
-	box-sizing: border-box;
-	background-color: whitesmoke;
-  }
+@import url(https://fonts.google.com/share?selection.family=Germania%20One);
 
 header {
-    font-size: 10vmin;
-    color: green;
-    background-color: black;
-    text-align: center;
+  position: relative;
+  font-family: 'Germania One', cursive, monospace;
+  font-size: 70px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: bolder;
+  background: linear-gradient(90deg, gold, silver, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 5s infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+@keyframes animate {
+  0% {
+    background-position: -500%;
   }
-  body {
-    margin: 0;
-    height: 100vh;
-    display: grid;
-    grid-template-rows: auto 1fr;
+  100% {
+    background-position: 500%;
   }
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  #health{
-    padding: 10px 0 4px 0;
-	  width: 300px;
-    background-color: #239A47;
-	  border: 1px solid black;
+}
 
-    
-  }
+::selection {
+  background-color: transparent;
+}
 
-  #dungeon {
-    width: 34vmin;
-    height: 30vmin;
-	/* background-image: url(/Users/KOC/code/doover/css/imgs/cage.jpeg); */
-    /* background-image: url(/Users/KOC/code/p1/imgs/monster.png); */
-    background-size: cover;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: blue;
+  transition: background-color .3s;
+}
+
+h1, h2 {
+  size: 80px;
+  color: gold;
+  font-family: 'Germania One', cursive;
+  font-weight: 500;
+}
+
+h3 {
+  color: gold;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  font-family: 'Germania One', cursive, monospace;
+  font-weight: 300;
+}
+
+.hide {
+  display: none;
+}
+
+/*MENU SCREEN*/
+
+.menu {
+  position: absolute;
+  top: 50vh;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+
+/*GAME SCREEN*/
+
+.monster {
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 50vh;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+#name {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: gold;
+  padding: 5px 10px;
+  font-size: 30px;
+  font-family: 'Germania One', cursive, monospace;
+  font-weight: 500;
+}
+
+
+.buttons a, .menu-buttons a {
+  display: inline-block;
+  font-size: 40px;
+  background-color: gold;
+  border: 0.16em solid rgba(255,255,255,0);
+  border-radius:2em;
+  box-sizing: border-box;
+  padding: 0.3em 1.2em;
+  margin: 0 0.1em 0.1em 0;
+  transition: background-color .1s;
+  text-decoration: none;
+  color: #131313;
+  font-weight: 300;
+  font-family: 'Germania One', cursive, monospace;
+  text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+  text-align:center;
+  transition: background-color .1s, color .1s;
+  
+}
+
+.hp {
+  color: black;
+  background-color: gold;
+  font-family: 'Germania One', cursive, monospace;
+  font-weight: 300;
+  font-size: 30px;
+  background-position: top;
+  text-align: center;
+  position: relative;
+  top: -60px;
+}
+
+
+.hp span {
+  font-weight: bolder;
+}
+
+.hp p {
+  display: inline;
+}
+
+#img {
+  width: 15vmin;
+  height: 40vmin;
+}
+
+@media (max-width: 860px) {
+  .hp {
+    font-size: 20px;
   }
+  .buttons a, .menu-buttons a {
+    font-size: 30px;
+  }
+  #name {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .hp p {
+    font-size: 20px;
+    display: block;
+  }
+  .buttons a, .menu-buttons a, {
+    font-size: 20px;
+    margin: 20px 5px 0px 5px;
+  }
+  #name {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .hp p {
+    font-size: 20px;
+    display: block;
+  }
+  .buttons a, .menu-buttons a {
+    font-size: 20px;
+    margin: 20px 2px 0px 2px;
+  }
+  #name {
+    font-size: 20px;
+  }
+  .monster {
+    top: 120px;
+    transform: translateY(0);
+  }
+}
+
