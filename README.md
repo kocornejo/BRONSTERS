@@ -30,4 +30,4 @@ https://itsdragonsnow.netlify.app/#
 ## icebox stuff:
 ### i want to create what i originally envisioned this game to be. lots of random monsters that grew and evolved over time. more interesting interactions with monsters. really got in over my head when trying to make this game and i thought my initial wireframe was simple and barebones. had all the assets i could want with barely the knowledge on how to use them. i still want to use them
 
-###more dragons, randomized, more monsters in general.
+### more dragons, randomized, more monsters in general.
