@@ -107,26 +107,26 @@ function startGame() {
 
 
 	//Start game
-	core();
-	let coreUpdate = setInterval(core, 100 * day);
+	init();
+	let initUpdate = setInterval(init, 100 * day);
 
 	//Main function of monster
-	function core() {
+	function init() {
 		//console.log(mnstr);
 		happinessHpCount = (mnstr.happiness / maxHappiness * 100).toFixed(2);
 		hungerHpCount = (mnstr.hunger / maxHunger * 100).toFixed(2);
 		disciplineHpCount = (mnstr.discipline / maxDiscipline * 100).toFixed(2);
 
-		//Scores
+		//days
 		days++;
 		daysBar.innerHTML = days;
 
-		//Death ability
+		//dead
 		if ((disciplineHpCount <= 0) || (happinessHpCount <= 0) || (hungerHpCount <= 0)) {
 			playHpCount = 0;
 			happinessHpCount = 0;
 			disciplineHpCount = 0;
-			clearInterval(coreUpdate);
+			clearInterval(initUpdate);
 			alert("Days: " + days + "\n  DON'T TALK TO ME OR MY SON EVER AGAIN! ");
             music.pause();
             gameOver.play();
