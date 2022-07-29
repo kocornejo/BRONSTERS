@@ -142,7 +142,7 @@ function startGame() {
 		if ((mnstr.discipline / maxDiscipline * 100) > 100) {
 			disciplineHpCount = 100;
 		}
-        if (days === 50){
+        if (days === 40){
             music.pause();
             victory.play();
             alert("Days survived:" + days + "\n You'll be rewarded greatly");
