@@ -57,6 +57,24 @@ h3 {
   text-align: center;
 }
 
+/*GAME OVER SCREEN*/
+.gameOver {
+  position: absolute;
+  top: 50vh;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+/*VICTORY SCREEN*/
+.victory {
+  position: absolute;
+  top: 50vh;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+
 
 /*GAME SCREEN*/
 

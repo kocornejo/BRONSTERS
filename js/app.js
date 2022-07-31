@@ -95,6 +95,8 @@ startBtn.addEventListener("click", function() {
 
 //Togglers for buttons
 document.querySelector(".game-screen").classList.toggle("hide");
+document.querySelector(".game-over-screen").classList.toggle("hide");
+document.querySelector(".victory-screen").classList.toggle("hide");
 
 function MainMenu() {
 	document.querySelector(".main-menu-screen").classList.toggle("hide");
@@ -104,6 +106,7 @@ function MainMenu() {
 function startGame() {
 	document.querySelector(".game-screen").classList.toggle("hide");
 	document.querySelector(".main-menu-screen").classList.toggle("hide");
+}
 
 
 	//Start game
@@ -127,7 +130,7 @@ function startGame() {
 			happinessHpCount = 0;
 			disciplineHpCount = 0;
 			clearInterval(initUpdate);
-			alert("Days: " + days + "\n  DON'T TALK TO ME OR MY SON EVER AGAIN! ");
+			gameOverScreen();
             music.pause();
             gameOver.play();
 		}
@@ -143,9 +146,9 @@ function startGame() {
 			disciplineHpCount = 100;
 		}
         if (days === 40){
+			victoryScreen();
             music.pause();
             victory.play();
-            alert("Days survived:" + days + "\n You'll be rewarded greatly");
         }
 
 		//Show HP on screen
@@ -158,4 +161,11 @@ function startGame() {
 
 
 	}
-}
+	function gameOverScreen() {
+		document.querySelector(".game-over-screen").classList.toggle("hide");
+		document.querySelector(".game-screen").classList.toggle("hide");
+	}
+	function victoryScreen() {
+		document.querySelector(".victory-screen").classList.toggle("hide");
+		document.querySelector(".game-screen").classList.toggle("hide");
+	}
